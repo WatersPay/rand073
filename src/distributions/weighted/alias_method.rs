@@ -34,8 +34,8 @@ use core::ops::{Add, AddAssign, Div, DivAssign, Mul, MulAssign, Sub, SubAssign};
 /// # Example
 ///
 /// ```
-/// use rand::distributions::weighted::alias_method::WeightedIndex;
-/// use rand::prelude::*;
+/// use rand073::distributions::weighted::alias_method::WeightedIndex;
+/// use rand073::prelude::*;
 ///
 /// let choices = vec!['a', 'b', 'c'];
 /// let weights = vec![2, 1, 1];

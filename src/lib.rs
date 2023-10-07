@@ -21,14 +21,14 @@
 //! functionality on top of RNGs.
 //!
 //! ```
-//! use rand::prelude::*;
+//! use rand073::prelude::*;
 //!
-//! if rand::random() { // generates a boolean
+//! if rand073::random() { // generates a boolean
 //!     // Try printing a random unicode code point (probably a bad idea)!
-//!     println!("char: {}", rand::random::<char>());
+//!     println!("char: {}", rand073::random::<char>());
 //! }
 //!
-//! let mut rng = rand::thread_rng();
+//! let mut rng = rand073::thread_rng();
 //! let y: f64 = rng.gen(); // generates a float between 0 and 1
 //!
 //! let mut nums: Vec<i32> = (1..100).collect();
@@ -135,8 +135,8 @@ use core::{mem, slice};
 /// Example:
 ///
 /// ```
-/// # use rand::thread_rng;
-/// use rand::Rng;
+/// # use rand073::thread_rng;
+/// use rand073::Rng;
 ///
 /// fn foo<R: Rng + ?Sized>(rng: &mut R) -> f32 {
 ///     rng.gen()
@@ -150,7 +150,7 @@ pub trait Rng: RngCore {
     /// # Example
     ///
     /// ```
-    /// use rand::{thread_rng, Rng};
+    /// use rand073::{thread_rng, Rng};
     ///
     /// let mut rng = thread_rng();
     /// let x: u32 = rng.gen();
@@ -168,7 +168,7 @@ pub trait Rng: RngCore {
     /// (< 64 bit), it will likely be faster to instead use [`Rng::fill`].
     ///
     /// ```
-    /// use rand::{thread_rng, Rng};
+    /// use rand073::{thread_rng, Rng};
     ///
     /// let mut rng = thread_rng();
     /// let tuple: (u8, i32, char) = rng.gen(); // arbitrary tuple support
@@ -199,7 +199,7 @@ pub trait Rng: RngCore {
     /// # Example
     ///
     /// ```
-    /// use rand::{thread_rng, Rng};
+    /// use rand073::{thread_rng, Rng};
     ///
     /// let mut rng = thread_rng();
     /// let n: u32 = rng.gen_range(0, 10);
@@ -222,8 +222,8 @@ pub trait Rng: RngCore {
     /// ### Example
     ///
     /// ```
-    /// use rand::{thread_rng, Rng};
-    /// use rand::distributions::Uniform;
+    /// use rand073::{thread_rng, Rng};
+    /// use rand073::distributions::Uniform;
     ///
     /// let mut rng = thread_rng();
     /// let x = rng.sample(Uniform::new(10u32, 15));
@@ -246,8 +246,8 @@ pub trait Rng: RngCore {
     /// # Example
     ///
     /// ```
-    /// use rand::{thread_rng, Rng};
-    /// use rand::distributions::{Alphanumeric, Uniform, Standard};
+    /// use rand073::{thread_rng, Rng};
+    /// use rand073::distributions::{Alphanumeric, Uniform, Standard};
     ///
     /// let rng = thread_rng();
     ///
@@ -290,7 +290,7 @@ pub trait Rng: RngCore {
     /// # Example
     ///
     /// ```
-    /// use rand::{thread_rng, Rng};
+    /// use rand073::{thread_rng, Rng};
     ///
     /// let mut arr = [0i8; 20];
     /// thread_rng().fill(&mut arr[..]);
@@ -316,8 +316,8 @@ pub trait Rng: RngCore {
     /// # Example
     ///
     /// ```
-    /// # use rand::Error;
-    /// use rand::{thread_rng, Rng};
+    /// # use rand073::Error;
+    /// use rand073::{thread_rng, Rng};
     ///
     /// # fn try_inner() -> Result<(), Error> {
     /// let mut arr = [0u64; 4];
@@ -344,7 +344,7 @@ pub trait Rng: RngCore {
     /// # Example
     ///
     /// ```
-    /// use rand::{thread_rng, Rng};
+    /// use rand073::{thread_rng, Rng};
     ///
     /// let mut rng = thread_rng();
     /// println!("{}", rng.gen_bool(1.0 / 3.0));
@@ -377,7 +377,7 @@ pub trait Rng: RngCore {
     /// # Example
     ///
     /// ```
-    /// use rand::{thread_rng, Rng};
+    /// use rand073::{thread_rng, Rng};
     ///
     /// let mut rng = thread_rng();
     /// println!("{}", rng.gen_ratio(2, 3));
@@ -514,13 +514,13 @@ impl_as_byte_slice_arrays!(!div 4096, N,N,N,N,N,N,N,);
 /// # Examples
 ///
 /// ```
-/// let x = rand::random::<u8>();
+/// let x = rand073::random::<u8>();
 /// println!("{}", x);
 ///
-/// let y = rand::random::<f64>();
+/// let y = rand073::random::<f64>();
 /// println!("{}", y);
 ///
-/// if rand::random() { // generates a boolean
+/// if rand073::random() { // generates a boolean
 ///     println!("Better lucky than good!");
 /// }
 /// ```
@@ -529,17 +529,17 @@ impl_as_byte_slice_arrays!(!div 4096, N,N,N,N,N,N,N,);
 /// following example can increase performance.
 ///
 /// ```
-/// use rand::Rng;
+/// use rand073::Rng;
 ///
 /// let mut v = vec![1, 2, 3];
 ///
 /// for x in v.iter_mut() {
-///     *x = rand::random()
+///     *x = rand073::random()
 /// }
 ///
 /// // can be made faster by caching thread_rng
 ///
-/// let mut rng = rand::thread_rng();
+/// let mut rng = rand073::thread_rng();
 ///
 /// for x in v.iter_mut() {
 ///     *x = rng.gen();

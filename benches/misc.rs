@@ -14,8 +14,8 @@ const RAND_BENCH_N: u64 = 1000;
 
 use test::Bencher;
 
-use rand::distributions::{Bernoulli, Distribution, Standard};
-use rand::prelude::*;
+use rand073::distributions::{Bernoulli, Distribution, Standard};
+use rand073::prelude::*;
 use rand_pcg::{Pcg32, Pcg64Mcg};
 
 #[bench]
@@ -72,7 +72,7 @@ fn misc_gen_ratio_var(b: &mut Bencher) {
 fn misc_bernoulli_const(b: &mut Bencher) {
     let mut rng = Pcg32::from_rng(&mut thread_rng()).unwrap();
     b.iter(|| {
-        let d = rand::distributions::Bernoulli::new(0.18).unwrap();
+        let d = rand073::distributions::Bernoulli::new(0.18).unwrap();
         let mut accum = true;
         for _ in 0..crate::RAND_BENCH_N {
             accum ^= rng.sample(d);

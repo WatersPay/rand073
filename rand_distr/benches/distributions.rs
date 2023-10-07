@@ -20,7 +20,7 @@ use std::num::{NonZeroU128, NonZeroU16, NonZeroU32, NonZeroU64, NonZeroU8};
 use std::time::Duration;
 use test::Bencher;
 
-use rand::prelude::*;
+use rand073::prelude::*;
 use rand_distr::{weighted::WeightedIndex, *};
 
 // At this time, distributions are optimised for 64-bit platforms.

@@ -28,8 +28,8 @@
 
 #![cfg(feature = "std")]
 
-use rand::distributions::{Distribution, Uniform};
-use rand::Rng;
+use rand073::distributions::{Distribution, Uniform};
+use rand073::Rng;
 
 struct SimulationResult {
     win: bool,
@@ -61,7 +61,7 @@ fn simulate<R: Rng>(random_door: &Uniform<u32>, rng: &mut R) -> SimulationResult
 // Returns the door the game host opens given our choice and knowledge of
 // where the car is. The game host will never open the door with the car.
 fn game_host_open<R: Rng>(car: u32, choice: u32, rng: &mut R) -> u32 {
-    use rand::seq::SliceRandom;
+    use rand073::seq::SliceRandom;
     *free_doors(&[car, choice]).choose(rng).unwrap()
 }
 
@@ -79,7 +79,7 @@ fn main() {
     // The estimation will be more accurate with more simulations
     let num_simulations = 10000;
 
-    let mut rng = rand::thread_rng();
+    let mut rng = rand073::thread_rng();
     let random_door = Uniform::new(0u32, 3);
 
     let (mut switch_wins, mut switch_losses) = (0, 0);

@@ -8,7 +8,7 @@
 
 use crate::utils::Float;
 use crate::{uniform::SampleUniform, Distribution, Uniform};
-use rand::Rng;
+use rand073::Rng;
 
 /// Samples uniformly from the unit ball (surface and interior) in three
 /// dimensions.
@@ -21,7 +21,7 @@ use rand::Rng;
 /// ```
 /// use rand_distr::{UnitBall, Distribution};
 ///
-/// let v: [f64; 3] = UnitBall.sample(&mut rand::thread_rng());
+/// let v: [f64; 3] = UnitBall.sample(&mut rand073::thread_rng());
 /// println!("{:?} is from the unit ball.", v)
 /// ```
 #[derive(Clone, Copy, Debug)]
@@ -55,9 +55,21 @@ mod tests {
     fn value_stability() {
         let mut rng = crate::test::rng(2);
         let expected = [
-            [0.018035709265959987, -0.4348771383120438, -0.07982762085055706],
-            [0.10588569388223945, -0.4734350111375454, -0.7392104908825501],
-            [0.11060237642041049, -0.16065642822852677, -0.8444043930440075]
+            [
+                0.018035709265959987,
+                -0.4348771383120438,
+                -0.07982762085055706,
+            ],
+            [
+                0.10588569388223945,
+                -0.4734350111375454,
+                -0.7392104908825501,
+            ],
+            [
+                0.11060237642041049,
+                -0.16065642822852677,
+                -0.8444043930440075,
+            ],
         ];
         let samples: [[f64; 3]; 3] = [
             UnitBall.sample(&mut rng),

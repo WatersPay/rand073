@@ -10,7 +10,7 @@
 //! The binomial distribution.
 
 use crate::{Distribution, Uniform};
-use rand::Rng;
+use rand073::Rng;
 use std::{error, fmt};
 
 /// The binomial distribution `Binomial(n, p)`.
@@ -24,7 +24,7 @@ use std::{error, fmt};
 /// use rand_distr::{Binomial, Distribution};
 ///
 /// let bin = Binomial::new(20, 0.3).unwrap();
-/// let v = bin.sample(&mut rand::thread_rng());
+/// let v = bin.sample(&mut rand073::thread_rng());
 /// println!("{} is from a binomial distribution", v);
 /// ```
 #[derive(Clone, Copy, Debug)]
@@ -295,7 +295,7 @@ impl Distribution<u64> for Binomial {
 mod test {
     use super::Binomial;
     use crate::Distribution;
-    use rand::Rng;
+    use rand073::Rng;
 
     fn test_binomial_mean_and_variance<R: Rng>(n: u64, p: f64, rng: &mut R) {
         let binomial = Binomial::new(n, p).unwrap();

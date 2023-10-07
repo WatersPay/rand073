@@ -7,7 +7,7 @@
 // except according to those terms.
 
 use average::Histogram;
-use rand::prelude::*;
+use rand073::prelude::*;
 
 const N_BINS: usize = 100;
 const N_SAMPLES: u32 = 1_000_000;

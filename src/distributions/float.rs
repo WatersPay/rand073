@@ -28,8 +28,8 @@ use core::mem;
 ///
 /// # Example
 /// ```
-/// use rand::{thread_rng, Rng};
-/// use rand::distributions::OpenClosed01;
+/// use rand073::{thread_rng, Rng};
+/// use rand073::distributions::OpenClosed01;
 ///
 /// let val: f32 = thread_rng().sample(OpenClosed01);
 /// println!("f32 from (0, 1): {}", val);
@@ -54,8 +54,8 @@ pub struct OpenClosed01;
 ///
 /// # Example
 /// ```
-/// use rand::{thread_rng, Rng};
-/// use rand::distributions::Open01;
+/// use rand073::{thread_rng, Rng};
+/// use rand073::distributions::Open01;
 ///
 /// let val: f32 = thread_rng().sample(Open01);
 /// println!("f32 from (0, 1): {}", val);

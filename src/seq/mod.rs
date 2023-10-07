@@ -42,10 +42,10 @@ use crate::Rng;
 /// methods for choosing and shuffling elements. You must `use` this trait:
 ///
 /// ```
-/// use rand::seq::SliceRandom;
+/// use rand073::seq::SliceRandom;
 ///
 /// fn main() {
-///     let mut rng = rand::thread_rng();
+///     let mut rng = rand073::thread_rng();
 ///     let mut bytes = "Hello, random!".to_string().into_bytes();
 ///     bytes.shuffle(&mut rng);
 ///     let str = String::from_utf8(bytes).unwrap();
@@ -68,8 +68,8 @@ pub trait SliceRandom {
     /// # Example
     ///
     /// ```
-    /// use rand::thread_rng;
-    /// use rand::seq::SliceRandom;
+    /// use rand073::thread_rng;
+    /// use rand073::seq::SliceRandom;
     ///
     /// let choices = [1, 2, 4, 8, 16, 32];
     /// let mut rng = thread_rng();
@@ -96,9 +96,9 @@ pub trait SliceRandom {
     ///
     /// # Example
     /// ```
-    /// use rand::seq::SliceRandom;
+    /// use rand073::seq::SliceRandom;
     ///
-    /// let mut rng = &mut rand::thread_rng();
+    /// let mut rng = &mut rand073::thread_rng();
     /// let sample = "Hello, audience!".as_bytes();
     ///
     /// // collect the results into a vector:
@@ -127,7 +127,7 @@ pub trait SliceRandom {
     /// # Example
     ///
     /// ```
-    /// use rand::prelude::*;
+    /// use rand073::prelude::*;
     ///
     /// let choices = [('a', 2), ('b', 1), ('c', 1)];
     /// let mut rng = thread_rng();
@@ -185,8 +185,8 @@ pub trait SliceRandom {
     /// # Example
     ///
     /// ```
-    /// use rand::seq::SliceRandom;
-    /// use rand::thread_rng;
+    /// use rand073::seq::SliceRandom;
+    /// use rand073::thread_rng;
     ///
     /// let mut rng = thread_rng();
     /// let mut y = [1, 2, 3, 4, 5];
@@ -226,10 +226,10 @@ pub trait SliceRandom {
 /// choosing one or more elements. You must `use` this trait:
 ///
 /// ```
-/// use rand::seq::IteratorRandom;
+/// use rand073::seq::IteratorRandom;
 ///
 /// fn main() {
-///     let mut rng = rand::thread_rng();
+///     let mut rng = rand073::thread_rng();
 ///     
 ///     let faces = "😀😎😐😕😠😢";
 ///     println!("I am {}!", faces.chars().choose(&mut rng).unwrap());

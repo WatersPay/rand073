@@ -19,10 +19,10 @@ use core::{fmt, u64};
 /// # Example
 ///
 /// ```rust
-/// use rand::distributions::{Bernoulli, Distribution};
+/// use rand073::distributions::{Bernoulli, Distribution};
 ///
 /// let d = Bernoulli::new(0.3).unwrap();
-/// let v = d.sample(&mut rand::thread_rng());
+/// let v = d.sample(&mut rand073::thread_rng());
 /// println!("{} is from a Bernoulli distribution", v);
 /// ```
 ///

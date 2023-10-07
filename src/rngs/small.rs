@@ -43,8 +43,8 @@ type Rng = rand_pcg::Pcg32;
 /// Initializing `SmallRng` with a random seed can be done using [`SeedableRng::from_entropy`]:
 ///
 /// ```
-/// use rand::{Rng, SeedableRng};
-/// use rand::rngs::SmallRng;
+/// use rand073::{Rng, SeedableRng};
+/// use rand073::rngs::SmallRng;
 ///
 /// // Create small, cheap to initialize and fast RNG with a random seed.
 /// // The randomness is supplied by the operating system.
@@ -56,8 +56,8 @@ type Rng = rand_pcg::Pcg32;
 /// efficient:
 ///
 /// ```
-/// use rand::{SeedableRng, thread_rng};
-/// use rand::rngs::SmallRng;
+/// use rand073::{SeedableRng, thread_rng};
+/// use rand073::rngs::SmallRng;
 ///
 /// // Create a big, expensive to initialize and slower, but unpredictable RNG.
 /// // This is cached and done only once per thread.

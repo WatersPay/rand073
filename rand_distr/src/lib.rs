@@ -24,8 +24,8 @@
 //!
 //! ## Re-exports
 //!
-//! This crate is a super-set of the [`rand::distributions`] module. See the
-//! [`rand::distributions`] module documentation for an overview of the core
+//! This crate is a super-set of the [`rand073::distributions`] module. See the
+//! [`rand073::distributions`] module documentation for an overview of the core
 //! [`Distribution`] trait and implementations.
 //!
 //! The following are re-exported:
@@ -67,7 +67,7 @@
 //!   - [`UnitCircle`] distribution
 //!   - [`UnitDisc`] distribution
 
-pub use rand::distributions::{
+pub use rand073::distributions::{
     uniform, weighted, Alphanumeric, Bernoulli, BernoulliError, DistIter, Distribution, Open01,
     OpenClosed01, Standard, Uniform,
 };
@@ -133,7 +133,7 @@ mod test {
     // generated. This is redundant with vector and correctness tests.
 
     /// Construct a deterministic RNG with the given seed
-    pub fn rng(seed: u64) -> impl rand::RngCore {
+    pub fn rng(seed: u64) -> impl rand073::RngCore {
         // For tests, we want a statistically good, fast, reproducible RNG.
         // PCG32 will do fine, and will be easy to embed if we ever need to.
         const INC: u64 = 11634580027462260723;

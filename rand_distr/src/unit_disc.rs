@@ -8,7 +8,7 @@
 
 use crate::utils::Float;
 use crate::{uniform::SampleUniform, Distribution, Uniform};
-use rand::Rng;
+use rand073::Rng;
 
 /// Samples uniformly from the unit disc in two dimensions.
 ///
@@ -20,7 +20,7 @@ use rand::Rng;
 /// ```
 /// use rand_distr::{UnitDisc, Distribution};
 ///
-/// let v: [f64; 2] = UnitDisc.sample(&mut rand::thread_rng());
+/// let v: [f64; 2] = UnitDisc.sample(&mut rand073::thread_rng());
 /// println!("{:?} is from the unit Disc.", v)
 /// ```
 #[derive(Clone, Copy, Debug)]

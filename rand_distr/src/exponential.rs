@@ -11,7 +11,7 @@
 
 use crate::utils::{ziggurat, Float};
 use crate::{ziggurat_tables, Distribution};
-use rand::Rng;
+use rand073::Rng;
 use std::{error, fmt};
 
 /// Samples floating-point numbers according to the exponential distribution,
@@ -31,7 +31,7 @@ use std::{error, fmt};
 ///
 /// # Example
 /// ```
-/// use rand::prelude::*;
+/// use rand073::prelude::*;
 /// use rand_distr::Exp1;
 ///
 /// let val: f64 = thread_rng().sample(Exp1);
@@ -86,7 +86,7 @@ impl Distribution<f64> for Exp1 {
 /// use rand_distr::{Exp, Distribution};
 ///
 /// let exp = Exp::new(2.0).unwrap();
-/// let v = exp.sample(&mut rand::thread_rng());
+/// let v = exp.sample(&mut rand073::thread_rng());
 /// println!("{} is from a Exp(2) distribution", v);
 /// ```
 #[derive(Clone, Copy, Debug)]

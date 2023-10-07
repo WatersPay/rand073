@@ -17,8 +17,8 @@ use rand_core::{impls, Error, RngCore};
 /// the generator yields a constant.
 ///
 /// ```
-/// use rand::Rng;
-/// use rand::rngs::mock::StepRng;
+/// use rand073::Rng;
+/// use rand073::rngs::mock::StepRng;
 ///
 /// let mut my_rng = StepRng::new(2, 1);
 /// let sample: [u64; 3] = my_rng.gen();

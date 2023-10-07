@@ -11,7 +11,7 @@
 
 use crate::utils::Float;
 use crate::{Distribution, Exp1, Gamma, Open01, StandardNormal};
-use rand::Rng;
+use rand073::Rng;
 use std::{error, fmt};
 
 /// The Dirichlet distribution `Dirichlet(alpha)`.
@@ -23,11 +23,11 @@ use std::{error, fmt};
 /// # Example
 ///
 /// ```
-/// use rand::prelude::*;
+/// use rand073::prelude::*;
 /// use rand_distr::Dirichlet;
 ///
 /// let dirichlet = Dirichlet::new(vec![1.0, 2.0, 3.0]).unwrap();
-/// let samples = dirichlet.sample(&mut rand::thread_rng());
+/// let samples = dirichlet.sample(&mut rand073::thread_rng());
 /// println!("{:?} is from a Dirichlet([1.0, 2.0, 3.0]) distribution", samples);
 /// ```
 #[derive(Clone, Debug)]

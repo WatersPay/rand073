@@ -13,8 +13,8 @@ extern crate test;
 
 use test::Bencher;
 
-use rand::prelude::*;
-use rand::seq::*;
+use rand073::prelude::*;
+use rand073::seq::*;
 use std::mem::size_of;
 
 // We force use of 32-bit RNG since seq code is optimised for use with 32-bit

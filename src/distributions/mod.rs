@@ -201,8 +201,8 @@ pub trait Distribution<T> {
     /// # Example
     ///
     /// ```
-    /// use rand::thread_rng;
-    /// use rand::distributions::{Distribution, Alphanumeric, Uniform, Standard};
+    /// use rand073::thread_rng;
+    /// use rand073::distributions::{Distribution, Alphanumeric, Uniform, Standard};
     ///
     /// let rng = thread_rng();
     ///
@@ -326,8 +326,8 @@ where
 ///
 /// ```
 /// # #![allow(dead_code)]
-/// use rand::Rng;
-/// use rand::distributions::{Distribution, Standard};
+/// use rand073::Rng;
+/// use rand073::distributions::{Distribution, Standard};
 ///
 /// struct MyF32 {
 ///     x: f32,
@@ -342,8 +342,8 @@ where
 ///
 /// ## Example usage
 /// ```
-/// use rand::prelude::*;
-/// use rand::distributions::Standard;
+/// use rand073::prelude::*;
+/// use rand073::distributions::Standard;
 ///
 /// let val: f32 = StdRng::from_entropy().sample(Standard);
 /// println!("f32 from [0, 1): {}", val);

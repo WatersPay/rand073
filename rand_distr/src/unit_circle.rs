@@ -8,7 +8,7 @@
 
 use crate::utils::Float;
 use crate::{uniform::SampleUniform, Distribution, Uniform};
-use rand::Rng;
+use rand073::Rng;
 
 /// Samples uniformly from the edge of the unit circle in two dimensions.
 ///
@@ -20,7 +20,7 @@ use rand::Rng;
 /// ```
 /// use rand_distr::{UnitCircle, Distribution};
 ///
-/// let v: [f64; 2] = UnitCircle.sample(&mut rand::thread_rng());
+/// let v: [f64; 2] = UnitCircle.sample(&mut rand073::thread_rng());
 /// println!("{:?} is from the unit circle.", v)
 /// ```
 ///

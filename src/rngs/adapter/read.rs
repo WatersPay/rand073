@@ -33,8 +33,8 @@ use rand_core::{impls, Error, RngCore};
 /// # Example
 ///
 /// ```
-/// use rand::Rng;
-/// use rand::rngs::adapter::ReadRng;
+/// use rand073::Rng;
+/// use rand073::rngs::adapter::ReadRng;
 ///
 /// let data = vec![1, 2, 3, 4, 5, 6, 7, 8];
 /// let mut rng = ReadRng::new(&data[..]);

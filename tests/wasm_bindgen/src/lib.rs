@@ -10,8 +10,8 @@
 
 #![doc(html_logo_url = "https://www.rust-lang.org/logos/rust-logo-128x128-blk.png")]
 
-use rand::rngs::{OsRng, StdRng};
-use rand::{Rng, SeedableRng};
+use rand073::rngs::{OsRng, StdRng};
+use rand073::{Rng, SeedableRng};
 use wasm_bindgen::prelude::*;
 
 #[wasm_bindgen]

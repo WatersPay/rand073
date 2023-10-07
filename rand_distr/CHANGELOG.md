@@ -6,7 +6,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## Unreleased
 - All error types now implement `std::error::Error` (#919)
-- Re-exported `rand::distributions::BernoulliError` (#919)
+- Re-exported `rand073::distributions::BernoulliError` (#919)
 
 ## [0.2.2] - 2019-09-10
 - Fix version requirement on rand lib (#847)

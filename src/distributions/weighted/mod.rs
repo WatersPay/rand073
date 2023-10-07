@@ -59,8 +59,8 @@ use core::fmt;
 /// # Example
 ///
 /// ```
-/// use rand::prelude::*;
-/// use rand::distributions::WeightedIndex;
+/// use rand073::prelude::*;
+/// use rand073::distributions::WeightedIndex;
 ///
 /// let choices = ['a', 'b', 'c'];
 /// let weights = [2,   1,   1];

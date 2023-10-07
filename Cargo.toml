@@ -1,5 +1,5 @@
 [package]
-name = "rand"
+name = "rand073"
 version = "0.7.3"
 authors = ["The Rand Project Developers", "The Rust Project Developers"]
 license = "MIT OR Apache-2.0"
@@ -22,13 +22,13 @@ appveyor = { repository = "rust-random/rand" }
 
 [features]
 # Meta-features:
-default = ["std"] # without "std" rand uses libcore
+default = ["std"]          # without "std" rand uses libcore
 nightly = ["simd_support"] # enables all features requiring nightly rust
-serde1 = [] # does nothing, deprecated
+serde1 = []                # does nothing, deprecated
 
 # Optional dependencies:
 std = ["rand_core/std", "rand_chacha/std", "alloc", "getrandom", "libc"]
-alloc = ["rand_core/alloc"]  # enables Vec and Box support (without std)
+alloc = ["rand_core/alloc"]                                              # enables Vec and Box support (without std)
 # re-export optional WASM dependencies to avoid breakage:
 # Warning: wasm-bindgen and stdweb features will be removed in rand 0.8;
 # recommended to activate via the getrandom crate instead.
@@ -38,7 +38,7 @@ getrandom = ["getrandom_package", "rand_core/getrandom"]
 
 # Configuration:
 simd_support = ["packed_simd"] # enables SIMD support
-small_rng = ["rand_pcg"]    # enables SmallRng
+small_rng = ["rand_pcg"]       # enables SmallRng
 
 [workspace]
 members = [

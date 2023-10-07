@@ -11,7 +11,7 @@
 
 use crate::utils::Float;
 use crate::{Cauchy, Distribution, Standard};
-use rand::Rng;
+use rand073::Rng;
 use std::{error, fmt};
 
 /// The Poisson distribution `Poisson(lambda)`.
@@ -25,7 +25,7 @@ use std::{error, fmt};
 /// use rand_distr::{Poisson, Distribution};
 ///
 /// let poi = Poisson::new(2.0).unwrap();
-/// let v: u64 = poi.sample(&mut rand::thread_rng());
+/// let v: u64 = poi.sample(&mut rand073::thread_rng());
 /// println!("{} is from a Poisson(2) distribution", v);
 /// ```
 #[derive(Clone, Copy, Debug)]

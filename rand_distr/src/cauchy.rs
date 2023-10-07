@@ -11,7 +11,7 @@
 
 use crate::utils::Float;
 use crate::{Distribution, Standard};
-use rand::Rng;
+use rand073::Rng;
 use std::{error, fmt};
 
 /// The Cauchy distribution `Cauchy(median, scale)`.
@@ -28,7 +28,7 @@ use std::{error, fmt};
 /// use rand_distr::{Cauchy, Distribution};
 ///
 /// let cau = Cauchy::new(2.0, 5.0).unwrap();
-/// let v = cau.sample(&mut rand::thread_rng());
+/// let v = cau.sample(&mut rand073::thread_rng());
 /// println!("{} is from a Cauchy(2, 5) distribution", v);
 /// ```
 #[derive(Clone, Copy, Debug)]

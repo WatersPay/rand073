@@ -15,7 +15,7 @@ use self::GammaRepr::*;
 use crate::normal::StandardNormal;
 use crate::utils::Float;
 use crate::{Distribution, Exp, Exp1, Open01};
-use rand::Rng;
+use rand073::Rng;
 use std::{error, fmt};
 
 /// The Gamma distribution `Gamma(shape, scale)` distribution.
@@ -40,7 +40,7 @@ use std::{error, fmt};
 /// use rand_distr::{Distribution, Gamma};
 ///
 /// let gamma = Gamma::new(2.0, 5.0).unwrap();
-/// let v = gamma.sample(&mut rand::thread_rng());
+/// let v = gamma.sample(&mut rand073::thread_rng());
 /// println!("{} is from a Gamma(2, 5) distribution", v);
 /// ```
 ///
@@ -237,7 +237,7 @@ where
 /// use rand_distr::{ChiSquared, Distribution};
 ///
 /// let chi = ChiSquared::new(11.0).unwrap();
-/// let v = chi.sample(&mut rand::thread_rng());
+/// let v = chi.sample(&mut rand073::thread_rng());
 /// println!("{} is from a χ²(11) distribution", v)
 /// ```
 #[derive(Clone, Copy, Debug)]
@@ -323,7 +323,7 @@ where
 /// use rand_distr::{FisherF, Distribution};
 ///
 /// let f = FisherF::new(2.0, 32.0).unwrap();
-/// let v = f.sample(&mut rand::thread_rng());
+/// let v = f.sample(&mut rand073::thread_rng());
 /// println!("{} is from an F(2, 32) distribution", v)
 /// ```
 #[derive(Clone, Copy, Debug)]
@@ -397,7 +397,7 @@ where
 /// use rand_distr::{StudentT, Distribution};
 ///
 /// let t = StudentT::new(11.0).unwrap();
-/// let v = t.sample(&mut rand::thread_rng());
+/// let v = t.sample(&mut rand073::thread_rng());
 /// println!("{} is from a t(11) distribution", v)
 /// ```
 #[derive(Clone, Copy, Debug)]
@@ -441,7 +441,7 @@ where
 /// use rand_distr::{Distribution, Beta};
 ///
 /// let beta = Beta::new(2.0, 5.0).unwrap();
-/// let v = beta.sample(&mut rand::thread_rng());
+/// let v = beta.sample(&mut rand073::thread_rng());
 /// println!("{} is from a Beta(2, 5) distribution", v);
 /// ```
 #[derive(Clone, Copy, Debug)]

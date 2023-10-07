@@ -27,8 +27,8 @@
 //! # Example usage
 //!
 //! ```
-//! use rand::{Rng, thread_rng};
-//! use rand::distributions::Uniform;
+//! use rand073::{Rng, thread_rng};
+//! use rand073::distributions::Uniform;
 //!
 //! let mut rng = thread_rng();
 //! let side = Uniform::new(-10.0, 10.0);
@@ -59,8 +59,8 @@
 //! to copy or clone the value, whatever is appropriate for your type.
 //!
 //! ```
-//! use rand::prelude::*;
-//! use rand::distributions::uniform::{Uniform, SampleUniform,
+//! use rand073::prelude::*;
+//! use rand073::distributions::uniform::{Uniform, SampleUniform,
 //!         UniformSampler, UniformFloat, SampleBorrow};
 //!
 //! struct MyF32(f32);
@@ -143,11 +143,11 @@ use crate::distributions::utils::Float;
 /// # Example
 ///
 /// ```
-/// use rand::distributions::{Distribution, Uniform};
+/// use rand073::distributions::{Distribution, Uniform};
 ///
 /// fn main() {
 ///     let between = Uniform::from(10..10000);
-///     let mut rng = rand::thread_rng();
+///     let mut rng = rand073::thread_rng();
 ///     let mut sum = 0;
 ///     for _ in 0..1000 {
 ///         sum += between.sample(&mut rng);
@@ -250,7 +250,7 @@ pub trait UniformSampler: Sized {
     /// Note that to use this method in a generic context, the type needs to be
     /// retrieved via `SampleUniform::Sampler` as follows:
     /// ```
-    /// use rand::{thread_rng, distributions::uniform::{SampleUniform, UniformSampler}};
+    /// use rand073::{thread_rng, distributions::uniform::{SampleUniform, UniformSampler}};
     /// # #[allow(unused)]
     /// fn sample_from_range<T: SampleUniform>(lb: T, ub: T) -> T {
     ///     let mut rng = thread_rng();

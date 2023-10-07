@@ -11,7 +11,7 @@
 
 use crate::utils::{ziggurat, Float};
 use crate::{ziggurat_tables, Distribution, Open01};
-use rand::Rng;
+use rand073::Rng;
 use std::{error, fmt};
 
 /// Samples floating-point numbers according to the normal distribution
@@ -29,7 +29,7 @@ use std::{error, fmt};
 ///
 /// # Example
 /// ```
-/// use rand::prelude::*;
+/// use rand073::prelude::*;
 /// use rand_distr::StandardNormal;
 ///
 /// let val: f64 = thread_rng().sample(StandardNormal);
@@ -105,7 +105,7 @@ impl Distribution<f64> for StandardNormal {
 ///
 /// // mean 2, standard deviation 3
 /// let normal = Normal::new(2.0, 3.0).unwrap();
-/// let v = normal.sample(&mut rand::thread_rng());
+/// let v = normal.sample(&mut rand073::thread_rng());
 /// println!("{} is from a N(2, 9) distribution", v)
 /// ```
 ///
@@ -169,7 +169,7 @@ where StandardNormal: Distribution<N>
 ///
 /// // mean 2, standard deviation 3
 /// let log_normal = LogNormal::new(2.0, 3.0).unwrap();
-/// let v = log_normal.sample(&mut rand::thread_rng());
+/// let v = log_normal.sample(&mut rand073::thread_rng());
 /// println!("{} is from an ln N(2, 9) distribution", v)
 /// ```
 #[derive(Clone, Copy, Debug)]

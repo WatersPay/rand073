@@ -10,14 +10,14 @@
 
 use crate::utils::Float;
 use crate::{Distribution, OpenClosed01};
-use rand::Rng;
+use rand073::Rng;
 use std::{error, fmt};
 
 /// Samples floating-point numbers according to the Pareto distribution
 ///
 /// # Example
 /// ```
-/// use rand::prelude::*;
+/// use rand073::prelude::*;
 /// use rand_distr::Pareto;
 ///
 /// let val: f64 = thread_rng().sample(Pareto::new(1., 2.).unwrap());

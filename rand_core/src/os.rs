@@ -20,7 +20,7 @@ use getrandom::getrandom;
 /// [getrandom] documentation for details.
 ///
 /// This struct is only available when specifying the crate feature `getrandom`
-/// or `std`. When using the `rand` lib, it is also available as `rand::rngs::OsRng`.
+/// or `std`. When using the `rand` lib, it is also available as `rand073::rngs::OsRng`.
 ///
 /// # Blocking and error handling
 ///

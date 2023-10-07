@@ -57,11 +57,11 @@ use rand_core::{CryptoRng, Error, RngCore, SeedableRng};
 /// # Example
 ///
 /// ```
-/// use rand::prelude::*;
+/// use rand073::prelude::*;
 /// use rand_chacha::ChaCha20Core; // Internal part of ChaChaRng that
 ///                              // implements BlockRngCore
-/// use rand::rngs::OsRng;
-/// use rand::rngs::adapter::ReseedingRng;
+/// use rand073::rngs::OsRng;
+/// use rand073::rngs::adapter::ReseedingRng;
 ///
 /// let prng = ChaCha20Core::from_entropy();
 /// let mut reseeding_rng = ReseedingRng::new(prng, 0, OsRng);

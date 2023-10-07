@@ -9,7 +9,7 @@
 
 use crate::utils::Float;
 use crate::{Beta, Distribution, Exp1, Open01, StandardNormal};
-use rand::Rng;
+use rand073::Rng;
 use std::{error, fmt};
 
 /// The PERT distribution.
@@ -25,7 +25,7 @@ use std::{error, fmt};
 /// use rand_distr::{Pert, Distribution};
 ///
 /// let d = Pert::new(0., 5., 2.5).unwrap();
-/// let v = d.sample(&mut rand::thread_rng());
+/// let v = d.sample(&mut rand073::thread_rng());
 /// println!("{} is from a PERT distribution", v);
 /// ```
 ///
@@ -119,20 +119,12 @@ mod test {
 
     #[test]
     fn test_pert() {
-        for &(min, max, mode) in &[
-            (-1., 1., 0.),
-            (1., 2., 1.),
-            (5., 25., 25.),
-        ] {
+        for &(min, max, mode) in &[(-1., 1., 0.), (1., 2., 1.), (5., 25., 25.)] {
             let _distr = Pert::new(min, max, mode).unwrap();
             // TODO: test correctness
         }
 
-        for &(min, max, mode) in &[
-            (-1., 1., 2.),
-            (-1., 1., -2.),
-            (2., 1., 1.),
-        ] {
+        for &(min, max, mode) in &[(-1., 1., 2.), (-1., 1., -2.), (2., 1., 1.)] {
             assert!(Pert::new(min, max, mode).is_err());
         }
     }

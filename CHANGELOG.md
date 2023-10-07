@@ -416,7 +416,7 @@ when updating from `rand 0.7.0` without also updating `rand_core`.
 - Depend on libc 0.2
 
 ### Fixed
-- Fix iterator protocol issue in `rand::sample`
+- Fix iterator protocol issue in `rand073::sample`
 
 
 ## [0.3.11] - 2015-08-31

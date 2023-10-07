@@ -7,7 +7,7 @@ No binding guarantees can be provided.
 
 ## Security premises
 
-Rand provides the trait `rand_core::CryptoRng` aka `rand::CryptoRng` as a marker
+Rand provides the trait `rand_core::CryptoRng` aka `rand073::CryptoRng` as a marker
 trait. Generators implementating `RngCore` *and* `CryptoRng`, and given the
 additional constraints that:
 
@@ -41,14 +41,14 @@ We will attempt to uphold these premises in the following crate versions,
 provided that only the latest patch version is used, and with potential
 exceptions for theoretical issues without a known exploit:
 
-| Crate | Versions | Exceptions |
-| ----- | -------- | ---------- |
-| `rand` | 0.7 |  |
-| `rand` | 0.5, 0.6 | Jitter |
-| `rand` | 0.4 | Jitter, ISAAC |
-| `rand_core` | 0.2 - 0.5 | |
-| `rand_chacha` | 0.1 - 0.2 | |
-| `rand_hc` | 0.1 - 0.2 | |
+| Crate         | Versions  | Exceptions    |
+| ------------- | --------- | ------------- |
+| `rand`        | 0.7       |               |
+| `rand`        | 0.5, 0.6  | Jitter        |
+| `rand`        | 0.4       | Jitter, ISAAC |
+| `rand_core`   | 0.2 - 0.5 |               |
+| `rand_chacha` | 0.1 - 0.2 |               |
+| `rand_hc`     | 0.1 - 0.2 |               |
 
 Explanation of exceptions:
 

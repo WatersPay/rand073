@@ -13,7 +13,7 @@
 //! be imported manually:
 //!
 //! ```
-//! use rand::prelude::*;
+//! use rand073::prelude::*;
 //! # let mut r = StdRng::from_rng(thread_rng()).unwrap();
 //! # let _: f32 = r.gen();
 //! ```

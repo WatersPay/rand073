@@ -9,7 +9,7 @@
 
 use crate::utils::Float;
 use crate::{Distribution, Standard};
-use rand::Rng;
+use rand073::Rng;
 use std::{error, fmt};
 
 /// The triangular distribution.
@@ -26,7 +26,7 @@ use std::{error, fmt};
 /// use rand_distr::{Triangular, Distribution};
 ///
 /// let d = Triangular::new(0., 5., 2.5).unwrap();
-/// let v = d.sample(&mut rand::thread_rng());
+/// let v = d.sample(&mut rand073::thread_rng());
 /// println!("{} is from a triangular distribution", v);
 /// ```
 ///
@@ -96,7 +96,7 @@ where Standard: Distribution<N>
 #[cfg(test)]
 mod test {
     use super::*;
-    use rand::{rngs::mock, Rng};
+    use rand073::{rngs::mock, Rng};
     use std::f64;
 
     #[test]
@@ -117,11 +117,7 @@ mod test {
             assert_eq!(distr.sample(&mut half_rng), median);
         }
 
-        for &(min, max, mode) in &[
-            (-1., 1., 2.),
-            (-1., 1., -2.),
-            (2., 1., 1.),
-        ] {
+        for &(min, max, mode) in &[(-1., 1., 2.), (-1., 1., -2.), (2., 1., 1.)] {
             assert!(Triangular::new(min, max, mode).is_err());
         }
     }
